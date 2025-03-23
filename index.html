@@ -69,7 +69,7 @@
             height: 80vh;
             margin: 160px auto 0;
             position: relative;
-            z-index: 1; /* 确保内容在椭圆之上 */
+            z-index: 1; 
         }
         .hero h1, .hero p, .hero .button {
             margin: 0;
@@ -111,29 +111,27 @@
         }
         .ellipse {
             position: absolute;
-            width: 700px; 
-            height: 600px;
+            width: 589px; 
+            height: 529px;
             border-radius: 700px;
             background: #FFEDF7; 
-            filter: blur(120px);
+            filter: blur(175px);
             top: 40%;
             left: 35%;
             transform: translate(-50%, -50%);
             z-index: -1;
-            opacity: 0.8; 
         }
         .ellipse2 {
             position: absolute;
-            width: 700px; 
-            height: 600px;
+            width: 589px; 
+            height: 529px;
             border-radius: 700px;
             background: #DDEBFF;
-            filter: blur(120px);
+            filter: blur(175px);
             top: 50%;
             left: 65%;
             transform: translate(-50%, -50%);
             z-index: -2;
-            opacity: 0.8; 
         }
         @media (max-width: 1024px) {
             .hero {
