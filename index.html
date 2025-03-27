@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rini Lu - UX Designer</title>
-    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -16,6 +15,7 @@
             text-align: center;
             position: relative;
             overflow-x: hidden; 
+            scroll-behavior: smooth; 
         }
         nav {
             display: flex;
@@ -144,6 +144,8 @@
             margin-bottom: 80px;
             color: #262F3F; 
             text-align: center;
+            position: relative; 
+            z-index: 10; 
         }
         
         /* Case Studies Section */
@@ -154,6 +156,8 @@
             margin: 0 auto 100px;
             max-width: 1200px;
             padding: 0 20px;
+            position: relative; 
+            z-index: 10; 
         }
         
         .case-card {
@@ -202,6 +206,8 @@
             letter-spacing: -0.821px;
             margin-bottom: 8px;
             transition: color 0.3s ease;
+            position: relative; 
+            z-index: 10; 
         }
         
         .case-card:hover .card-title {
@@ -217,6 +223,8 @@
             font-weight: 400;
             line-height: normal;
             letter-spacing: -0.41px;
+            position: relative; 
+            z-index: 10;
         }
         
         .card-image {
@@ -252,70 +260,64 @@
                 margin-bottom: 50px;
             }
         }
+
+        .about-me {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 100px 0;
+            text-align: center;
+        }
+
+        .about-me h2 {
+            font-size: 40px;
+            font-weight: 600;
+            letter-spacing: -1.2px;
+            margin-top: 10px; 
+            margin-bottom: 80px;
+            color: #262F3F; 
+            text-align: center;
+        }
+
+        .about-me-images {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .about-me-image {
+            width: 260px;
+            height: 350px;
+            border-radius: 34.463px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .about-me-description {
+            color: rgba(38, 47, 63, 0.90);
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 38px;
+            max-width: 824px;
+            text-align: center;
+        }
+
         @media (max-width: 768px) {
-            .hero {
-                margin-top: 140px;
+            .about-me-images {
+                flex-direction: column;
+                align-items: center;
             }
-            .hero h1 {
-                font-size: 40px;
-                line-height: 50px;
+
+            .about-me-image {
+                margin-bottom: 20px;
             }
-            .hero p {
+
+            .about-me-description {
+                max-width: 90%;
                 font-size: 18px;
                 line-height: 30px;
-                max-width: 90%;
-            }
-            nav {
-                top: 20px;
-            }
-            nav ul {
-                gap: 25px;
-                padding: 12px 30px;
-            }
-            .ellipse, .ellipse2 {
-                width: 400px;
-                height: 350px;
-            }
-            .case-card {
-                width: 90%;
-                height: auto;
-                min-height: 615px;
-            }
-            .card-image {
-                max-width: 90%;
-            }
-            .section-title {
-                font-size: 32px;
-                margin-top: 80px;
-                margin-bottom: 40px;
-            }
-        }
-        @media (max-width: 600px) {
-            nav {
-                top: 10px;
-            }
-            nav ul {
-                gap: 15px;
-                padding: 10px 20px;
-            }
-            nav ul li a {
-                font-size: 16px;
-            }
-            .section-title {
-                font-size: 28px;
-                margin-top: 70px;
-                margin-bottom: 35px;
-            }
-        }
-        
-        /* Medium size nav bar adjustment */
-        @media (min-width: 601px) and (max-width: 1024px) {
-            nav ul {
-                padding: 15px 40px;
-                gap: 35px;
-            }
-            nav ul li a {
-                font-size: 17px;
             }
         }
     </style>
@@ -326,7 +328,7 @@
             <ul>
                 <li><a href="#" class="active">Home</a></li>
                 <li><a href="#featured-projects">Work</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="#about-me">About</a></li>
                 <li><a href="https://drive.google.com/file/d/1YK345_ER1w7ivfHr5IJ7rxAxT7-SHt5Z/view?usp=sharing" target="_blank">Resume</a></li>
             </ul>
         </nav>
@@ -337,7 +339,7 @@
             <div class="ellipse2"></div>
             <h1>Rini Lu is a UX Designer with a background in psychology.</h1>
             <p>Recently launched a note-taking app on the US App Store, and is currently a sophomore at @UWaterloo, majoring in Global Business and Digital Arts with a minor in Psychology. She designs with empathy to create products filled with love.</p>
-            <a href="about.html" class="button">Get to know me</a>
+            <a href="#about-me" class="button">Get to know me</a>
         </section>
         
         <h2 id="featured-projects" class="section-title">Featured Projects</h2>
@@ -362,6 +364,16 @@
                     <img src="Memohub.png" alt="Memohub App" class="card-image">
                 </a>
             </div>
+        </section>
+
+        <section id="about-me" class="about-me">
+            <h2>About Me</h2>
+            <div class="about-me-images">
+                <div class="about-me-image" style="background-image: url('1.png')"></div>
+                <div class="about-me-image" style="background-image: url('2.png')"></div>
+                <div class="about-me-image" style="background-image: url('3.png')"></div>
+            </div>
+            <p class="about-me-description">Hey there, I'm Rini. I started learning gouache and sketching at the age of six, and throughout my childhood. As I stepped into university, I discovered UI/UX through social media, I fell in love with it instantly. I realized that art was no longer just about personal expression on a childhood canvas; it had evolved into something bigger, a way for me to create value for users and society through design. Design is about people. About seeing them, understanding them, and creating for them.</p>
         </section>
     </main>
 </body>
