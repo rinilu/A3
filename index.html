@@ -99,9 +99,9 @@
             color: #FFF;
             font-family: 'Inter', sans-serif;
             font-size: 18px;
-            font-weight: 400;
+            font-weight: 350;
             line-height: 38px;
-            letter-spacing: -0.45px;
+            letter-spacing: -0.1px;
             border-radius: 26px;
             border: none;
             cursor: pointer;
@@ -137,9 +137,9 @@
         
         /* Featured Projects Section Title */
         .section-title {
-            font-size: 40px;
-            font-weight: 600;
-            letter-spacing: -1.2px;
+            font-size: 28px;
+            font-weight: 500;
+            letter-spacing: -1px;
             margin-top: 0px; 
             margin-bottom: 80px;
             color: #262F3F; 
@@ -270,11 +270,11 @@
         }
 
         .about-me h2 {
-            font-size: 40px;
-            font-weight: 600;
-            letter-spacing: -1.2px;
+            font-size: 28px;
+            font-weight: 500;
+            letter-spacing: -1px;
             margin-top: 10px; 
-            margin-bottom: 80px;
+            margin-bottom: 60px;
             color: #262F3F; 
             text-align: center;
         }
@@ -301,7 +301,7 @@
             font-weight: 400;
             line-height: 38px;
             max-width: 824px;
-            text-align: center;
+            text-align: left;
         }
 
         @media (max-width: 768px) {
@@ -319,6 +319,43 @@
                 font-size: 18px;
                 line-height: 30px;
             }
+        }
+
+        /* Footer Styles */
+        footer {
+            margin-top: 100px;
+            padding: 40px 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        footer table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: auto;
+        }
+
+        footer table td {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: rgba(38, 47, 63, 0.90);
+            border: none;
+        }
+
+        footer table td.divider {
+            border-left: 1px solid #262F3F;
+            padding: 0;
+            width: 1px;
+        }
+
+        footer a {
+            color: rgba(38, 47, 63, 0.90);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #3789F4;
         }
     </style>
 </head>
@@ -376,5 +413,15 @@
             <p class="about-me-description">Hey there, I'm Rini. I started learning gouache and sketching at the age of six, and throughout my childhood. As I stepped into university, I discovered UI/UX through social media, I fell in love with it instantly. I realized that art was no longer just about personal expression on a childhood canvas; it had evolved into something bigger, a way for me to create value for users and society through design. Design is about people. About seeing them, understanding them, and creating for them.</p>
         </section>
     </main>
+
+    <footer>
+        <table>
+            <tr>
+                <td>All rights reserved © Rini Lu</td>
+                <td class="divider"></td>
+                <td><a href="mailto:r28lu@uwaterloo.ca">r28lu@uwaterloo.ca</a></td>
+            </tr>
+        </table>
+    </footer>
 </body>
 </html>
